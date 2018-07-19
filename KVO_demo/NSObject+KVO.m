@@ -121,8 +121,8 @@ static void KVO_setterMethod(id self, SEL _cmd, int _newValue){
     }
     
     const char * types = method_getTypeEncoding(setterMethod);
-    types = "v@:@";//对象
-    types = "v@:q";//int
+//    types = "v@:@";//对象
+//    types = "v@:q";//int
     /*
      类
      方法名

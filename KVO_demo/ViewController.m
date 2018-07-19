@@ -46,8 +46,8 @@
 //    }];
     
     [self.person TQL_addObserver:self forKeyPath:@"sex" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil notiBlock:^(id observedObject, NSString *keyPath, id newValue, id oldValue) {
-        NSLog(@"age = %@",newValue);
-        NSLog(@"age = %@",oldValue);
+        NSLog(@"回调啦 new age = %@",newValue);
+        NSLog(@"回调啦 old age = %@",oldValue);
     }];
     
     
