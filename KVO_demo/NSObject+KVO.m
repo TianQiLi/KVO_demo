@@ -113,24 +113,18 @@ static void KVO_setterMethod(id self, SEL _cmd, int _newValue){
     Class  superClass = self.class;
     //创建新类
     Class newClass = [self createNewClassFromSuperClass:superClass];
-    if (newClass) {
-        //注册新类
-        objc_registerClassPair(newClass);
-        
-        //交换
-        object_setClass(self, newClass);
-    }
+ 
    
-    
     //添加setter方法，相当于重写setter方法， "v@:i" 含义 @: id   : SEL     v : void
     
     //    OC(消息发送机制),方法由两部分组成，方法编号@selector和方法实现(imp方法指针)，先找方法编号再得到方法的指针，再执行方法的代码块。
     SEL setterSeL = NSSelectorFromString(setterForgetter(keyPath));
  
-    /*添加class方法*/
+    /*添加class方法-检测判断原类是否有改方法*/
     Method setterMethod = class_getInstanceMethod(superClass, setterSeL);
     if (!setterMethod) {
-        NSLog(@"invalide");
+        NSLog(@"invalide-原类没有set 方法，不允许修改");
+        @throw @"失败了";
     }
     
     const char * types = method_getTypeEncoding(setterMethod);
@@ -195,9 +189,16 @@ static Class TQL_Class(id self){
         class_addMethod(newClass, @selector(class), (IMP)TQL_Class, type);
         NSLog(@"添加新类成功%@\n",newClass);
         
+        
+        //注册新类
+        objc_registerClassPair(newClass);
+        
+        //交换
+        object_setClass(self, newClass);
+        
         return newClass;
     }else
-        return nil;
+        return classSuper;
 
    
     
