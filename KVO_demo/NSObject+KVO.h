@@ -13,5 +13,5 @@ typedef void (^TQL_NotificationBlock)(id observedObject, NSString * keyPath ,id 
 @interface NSObject (KVO)
  
 -(void)TQL_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context notiBlock:(TQL_NotificationBlock)block;
-
+-(void)TQL_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath;
 @end

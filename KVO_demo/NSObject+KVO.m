@@ -94,6 +94,19 @@ static void KVO_setterMethod(id self, SEL _cmd, int _newValue){
     
     
 }
+
+
+-(void)TQL_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath{
+    NSMutableArray *observers  = objc_getAssociatedObject(self, &kTQLKVOAssociatedObservers);
+    for (TQL_ObserVationInfo *each in observers) {
+        if ((each.observer ==  observer ) && [each.key isEqualToString:keyPath]) {
+            [observers removeObject:each];
+        }
+    }
+    
+}
+
+
 -(void)TQL_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context notiBlock:(TQL_NotificationBlock)block{
     //1. 创建新类
   

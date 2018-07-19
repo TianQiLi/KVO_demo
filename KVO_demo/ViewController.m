@@ -19,6 +19,7 @@
 - (void)dealloc{
     NSLog(@"%s\n",__func__);
     [self removeObserver:_person forKeyPath:@"age"];
+    [self.person TQL_removeObserver:self forKeyPath:@"sex"];
 }
 
 - (IBAction)clickBtn:(id)sender {
