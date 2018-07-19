@@ -13,6 +13,8 @@
 		1CCC6A7520FF197D008AC6A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CCC6A7420FF197D008AC6A2 /* Assets.xcassets */; };
 		1CCC6A7820FF197D008AC6A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CCC6A7620FF197D008AC6A2 /* LaunchScreen.storyboard */; };
 		1CCC6A7B20FF197D008AC6A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC6A7A20FF197D008AC6A2 /* main.m */; };
+		1CCC6A8320FF1A15008AC6A2 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC6A8220FF1A15008AC6A2 /* Person.m */; };
+		1CCC6A8620FF26F2008AC6A2 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC6A8520FF26F2008AC6A2 /* NSObject+KVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		1CCC6A7720FF197D008AC6A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CCC6A7920FF197D008AC6A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CCC6A7A20FF197D008AC6A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1CCC6A8120FF1A15008AC6A2 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		1CCC6A8220FF1A15008AC6A2 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		1CCC6A8420FF26F2008AC6A2 /* NSObject+KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
+		1CCC6A8520FF26F2008AC6A2 /* NSObject+KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				1CCC6A6C20FF197D008AC6A2 /* AppDelegate.m */,
 				1CCC6A6E20FF197D008AC6A2 /* ViewController.h */,
 				1CCC6A6F20FF197D008AC6A2 /* ViewController.m */,
+				1CCC6A8420FF26F2008AC6A2 /* NSObject+KVO.h */,
+				1CCC6A8520FF26F2008AC6A2 /* NSObject+KVO.m */,
+				1CCC6A8120FF1A15008AC6A2 /* Person.h */,
+				1CCC6A8220FF1A15008AC6A2 /* Person.m */,
 				1CCC6A7120FF197D008AC6A2 /* Main.storyboard */,
 				1CCC6A7420FF197D008AC6A2 /* Assets.xcassets */,
 				1CCC6A7620FF197D008AC6A2 /* LaunchScreen.storyboard */,
@@ -144,6 +154,8 @@
 			files = (
 				1CCC6A7020FF197D008AC6A2 /* ViewController.m in Sources */,
 				1CCC6A7B20FF197D008AC6A2 /* main.m in Sources */,
+				1CCC6A8620FF26F2008AC6A2 /* NSObject+KVO.m in Sources */,
+				1CCC6A8320FF1A15008AC6A2 /* Person.m in Sources */,
 				1CCC6A6D20FF197D008AC6A2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +230,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -280,6 +292,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76JSPN4743;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = KVO_demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.UDown.KVO-demo";
@@ -294,6 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76JSPN4743;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = KVO_demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.UDown.KVO-demo";
